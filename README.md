@@ -1,1 +1,1 @@
-# learning-diary-project-
+# Learning Diary
