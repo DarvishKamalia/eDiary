@@ -19,6 +19,7 @@ class JSONmodule:
             r.close()
 
         ##Writes the dictionary to the file specified
+        #@param filename The name of the output file
         def write (self, filename = "testout"):
             w = open (filename, 'w')
             json.dump(self.entryMap, w, indent=4)
