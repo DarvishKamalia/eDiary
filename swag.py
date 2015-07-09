@@ -43,3 +43,6 @@ class JSONmodule:
         def addEntry (self, newEntry = (1425772844, "New Test Entry Text"), filename = "test"):
             month = self.timestampToMonth(newEntry[0])
             self.entryMap[month].append({"date": newEntry[0], "text":newEntry[1]})
+
+
+        #TODO: Implement delete functionality 
