@@ -49,6 +49,6 @@ class JSONmodule:
         ##Deletes the entry with the given timestamp from the map
         #@param toDelete A tuple containing the timestamp and the text of the entry to be deleted
 
-        def removeEntry (self, toDelete = (1428759570, "swag swag swag")):
+        def removeEntry (self, toDelete):
             month  = self.timestampToMonth(toDelete[0])
             self.entryMap[month].remove(({"date": toDelete[0], "text":toDelete[1]}))
