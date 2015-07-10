@@ -43,8 +43,11 @@ class JSONmodule:
         #@param newEntry A tuple containing the timestamp and the text of the new entry
         #@param filename The name of the file where the database will be written after the update
         def addEntry (self, newEntry, filename = "test"):
-            month = self.timestampToMonth(newEntry[0])
-            self.entryMap[month].append({"date": newEntry[0], "text":newEntry[1]})
+			month = self.timestampToMonth(newEntry[0])
+			print month
+			if not month in self.entryMap:
+				self.entryMap[month] = []
+			self.entryMap[month].append({"date": newEntry[0], "text":newEntry[1]})
 
         ##Deletes the entry with the given timestamp from the map
         #@param toDelete A tuple containing the timestamp and the text of the entry to be deleted

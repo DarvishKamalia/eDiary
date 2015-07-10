@@ -21,10 +21,9 @@ def note():
 	if request.query.entry == "": 
 		return redirect('/home')
 	entryTuple = ()
-	print float(datetime.datetime.now().strftime('%s'))
-	entryTuple += (float(datetime.datetime.now().strftime('%s')), request.query.entry,)
-	print entryTuple
+	entryTuple += (float(datetime.datetime.now().strftime('%s')), request.query.entry,)	
 	JSONmodule.addEntry(entryTuple)	
-	return request.query.entry
+	JSONmodule.write()
+	return redirect('/home')
 
 run(app, reloader=True)
