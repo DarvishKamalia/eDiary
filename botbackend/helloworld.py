@@ -1,7 +1,11 @@
-from bottle import Bottle, run, template, static_file, request
-from bottle import redirect
-app = Bottle()
+from bottle import Bottle, run, template, static_file, request, redirect
+import datetime # Get the current timestamp
+import swag as swag  
 
+
+
+app = Bottle()
+JSONmodule = swag.JSONmodule("test")
 @app.route('/home')
 def home():	
 	return static_file('main.html', root='static/')
@@ -16,10 +20,11 @@ def server_static(filename):
 def note():
 	if request.query.entry == "": 
 		return redirect('/home')
+	entryTuple = ()
+	print float(datetime.datetime.now().strftime('%s'))
+	entryTuple += (float(datetime.datetime.now().strftime('%s')), request.query.entry,)
+	print entryTuple
+	JSONmodule.addEntry(entryTuple)	
 	return request.query.entry
-
-
-
-
 
 run(app, reloader=True)
