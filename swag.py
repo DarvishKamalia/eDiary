@@ -44,6 +44,7 @@ class JSONmodule:
         #@param filename The name of the file where the database will be written after the update
         def addEntry (self, newEntry, filename = "test"):
             month = self.timestampToMonth(newEntry[0])
+            
             self.entryMap[month].append({"date": newEntry[0], "text":newEntry[1]})
 
         ##Deletes the entry with the given timestamp from the map
