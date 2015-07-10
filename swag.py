@@ -1,6 +1,8 @@
 import json #JSON Encoder and Decoder library
 from datetime import datetime
 
+#TODO: Update/Remove default values of arguments
+
 ## JSONmodule
 #  This class controls file IO and stores entries in a map
 class JSONmodule:
@@ -12,7 +14,7 @@ class JSONmodule:
             self.updateMap(filename)
 
         ##Updates the map by reading values from the given file
-        #@param filename
+        #@param filename The file containing the map in valid JSON format
         def updateMap (self, filename = "test"):
             r = open (filename, 'r')
             self.entryMap = json.load(r)
@@ -37,12 +39,16 @@ class JSONmodule:
         def getEntriesByMonth (self, month = "May 2015"):
             return self.entryMap[month]
 
-        ##Inserts a new entry in the dictionary and writes the updated database to the given file
+        ##Inserts a new entry in the dictionary and writes the updated map to the given file
         #@param newEntry A tuple containing the timestamp and the text of the new entry
         #@param filename The name of the file where the database will be written after the update
-        def addEntry (self, newEntry = (1425772844, "New Test Entry Text"), filename = "test"):
+        def addEntry (self, newEntry, filename = "test"):
             month = self.timestampToMonth(newEntry[0])
             self.entryMap[month].append({"date": newEntry[0], "text":newEntry[1]})
 
+        ##Deletes the entry with the given timestamp from the map
+        #@param toDelete A tuple containing the timestamp and the text of the entry to be deleted
 
-        #TODO: Implement delete functionality 
+        def removeEntry (self, toDelete = (1428759570, "swag swag swag")):
+            month  = self.timestampToMonth(toDelete[0])
+            self.entryMap[month].remove(({"date": toDelete[0], "text":toDelete[1]}))
