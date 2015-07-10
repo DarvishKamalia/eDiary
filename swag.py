@@ -25,7 +25,7 @@ class JSONmodule:
         def write (self, filename = "testout"):
             w = open (filename, 'w')
             json.dump(self.entryMap, w, indent=4)
-            w.close
+            w.close()
 
         ##Extracts Month from Unix timestamp in the format "May 2015"
         #@param timestamp The timestamp to be converted
