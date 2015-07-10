@@ -1,15 +1,25 @@
-from bottle import Bottle, run, template, static_file
-
+from bottle import Bottle, run, template, static_file, request
+from bottle import redirect
 app = Bottle()
 
 @app.route('/home')
 def home():	
-	return static_file('main.html', root='templates/')
+	return static_file('main.html', root='static/')
 
-@app.get('/<filename>')
+# static files (like CSS, fonts, pictures)
+@app.get('/<filename:path>')
 def server_static(filename):
-	return static_file(filename, root='templates/')
+	return static_file(filename, 'static/')
+
+# get the text from the textarea
+@app.get('/new')
+def note():
+	if request.query.entry == "": 
+		return redirect('/home')
+	return request.query.entry
 
 
 
-run(app, host='localhost', port=8080, debug=True)
+
+
+run(app, reloader=True)
