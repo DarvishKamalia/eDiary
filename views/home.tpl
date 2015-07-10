@@ -23,10 +23,10 @@
 				% entry = entries[i]
 				<div class='entry'>
 					<p class='date'>
-						{{entry.time}} &nbsp;|&nbsp; {{entry.date}} &nbsp;|&nbsp;
-						<a href='/erase/{{entry.id}}' title='Erase'><i class='fa fa-eraser'></i></a>
+						{{entry['time']}} &nbsp;|&nbsp; {{entry['date']}} &nbsp;|&nbsp;
+						<a href='/erase/{{entry['id']}}' title='Erase'><i class='fa fa-eraser'></i></a>
 					</p>
-					<p class='text'>{{entry.text}}</p>
+					<p class='text'>{{entry['text']}}</p>
 				</div>
 				% if i != len(entries) - 1:
 					<hr>
