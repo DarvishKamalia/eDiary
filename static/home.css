@@ -1,18 +1,6 @@
-body, div, form {
-	display : flex;
-	flex-direction : column;
-}
-
-html, body {
-	height : 100%;
-}
-
 body {
 	flex-direction : row;
-	margin : 0;
 }
-
-/* --- */
 
 #left {
 	flex : 1 0;
@@ -42,7 +30,7 @@ textarea {
 	padding : 0.5em;
 }
 
-input {
+button {
 	flex : 0 0 auto;
 	border : none;
 	padding : 0.5em;
@@ -51,17 +39,17 @@ input {
 	cursor : pointer;
 }
 
-textarea:focus, input:focus {
+textarea:focus, button:focus {
 	outline : none;
 }
 
 /* --- */
 
 #recent {
+	margin : 0;
+	padding : 10pt 0pt;
 	text-align : center;
 }
-
-/* --- */
 
 .entry {
 	padding : 10pt 0pt;
@@ -76,38 +64,4 @@ textarea:focus, input:focus {
 
 .text {
 	margin : 0;
-}
-
-/* --- */
-
-h1, h2, h3 {
-	font-family : 'Boogaloo';
-	font-weight : normal;
-}
-
-p, ul, ol {
-	font-family : 'Cabin';
-}
-
-input, textarea {
-	font-family : 'Cabin';
-	font-size : medium;
-	resize : none;
-}
-
-a {
-	text-decoration : none;
-}
-
-a:link {
-	color : #4b0082;
-}
-
-a:visited {
-	color : #008080;
-}
-
-hr {
-	margin : 0;
-	border-top : thin solid black;
 }
