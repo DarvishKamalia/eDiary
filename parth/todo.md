@@ -1,0 +1,4 @@
+- encryption
+- when app starts, ask for name
+- quotes on exit
+- feeling --dash-- --smiley--
