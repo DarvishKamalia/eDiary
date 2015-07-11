@@ -1,16 +1,5 @@
-html, body {
-	height : 100%;
-	margin : 0;
-}
-
-body, div, form {
-	display : flex;
-	flex-direction : column;
-}
-
-hr {
-	margin : 0;
-	border-top : thin solid black;
+* {
+	flex : 0 0 auto;
 }
 
 /* --- */
@@ -24,20 +13,32 @@ h1, h2, h3 {
 	font-weight : normal;
 }
 
-input, textarea {
-	font-family : inherit;
-	font-size : inherit;
-	resize : none;
-}
-
 a {
 	text-decoration : none;
 }
 
 a:link {
-	color : #4b0082;
+	color : #005555;
 }
 
 a:visited {
-	color : #008080;
+	color : #007777;
+}
+
+/* --- */
+
+input, button, select, textarea {
+	font-family : inherit;
+	font-size : inherit;
+	resize : none;
+	border : none;
+	padding : 0.5em;
+}
+
+input:focus, button:focus, select:focus, textarea:focus {
+	outline : none;
+}
+
+button {
+	cursor : pointer;
 }
