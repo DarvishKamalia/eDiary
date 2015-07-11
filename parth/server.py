@@ -2,6 +2,8 @@ from bottle import route, run, template, request, redirect, static_file
 from db import load, store
 from entry import make
 
+name = ""
+
 # static files (like CSS, fonts, pictures)
 @route('/static/<filepath:path>')
 def static(filepath):
@@ -10,8 +12,33 @@ def static(filepath):
 # homepage
 @route('/home')
 def home():
-	data = {'entries' : load()[0:10]}
+	global name
+	if name == "":
+		return redirect('/signin')
+	data = {'entries' : load()[0:10], 'name' : name}
 	return template('home', data) 
+
+@route('/signin')
+def signin():
+	return template('signin')
+
+# Sign Out Page
+@route('/signout')
+def signout():
+	global name
+	name = ""
+	return redirect('/home')
+
+
+
+#Sign In Page
+@route('/signin', method='POST')
+def signin_post():
+	global name
+	if request.forms.name != "":
+		name = request.forms.name
+		return redirect('/home')
+	return redirect('/signin')
 
 # log a new entry
 @route('/log', method='POST')
@@ -77,4 +104,4 @@ def search():
 	data = {'entries' : result}
 	return template('search', data)
 
-run(reloader=True, debug=True)
+run(reloader=True,port=8000, debug=True)

@@ -70,9 +70,9 @@
 			</div>
 		</div>
 		<div id='right'>
-			<form class='name' action='/exit'>
-				<p class='name'>Hi there, Parth!</p>
-				<button class='name' type='submit'><i class='fa fa-close'></i>&nbsp; Exit</button>
+			<form class='name' action='/signout'>
+				<p class='name'>Hi there, {{name}}</p>
+				<button class='name' type='submit'><i class='fa fa-sign-out'></i>&nbsp; Sign Out</button>
 			</form>
 		</div>
 	</body>
