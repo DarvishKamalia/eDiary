@@ -71,7 +71,7 @@
 		</div>
 		<div id='right'>
 			<form class='name' action='/signout'>
-				<p class='name'>Hi there, {{name}}</p>
+				<p class='name'>Hi there, {{name}}!</p>
 				<button class='name' type='submit'><i class='fa fa-sign-out'></i>&nbsp; Sign Out</button>
 			</form>
 		</div>
