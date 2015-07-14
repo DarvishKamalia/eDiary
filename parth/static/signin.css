@@ -19,10 +19,17 @@ div#right {
 
 /* --- */
 
-h2.signin {
+h2#welcome {
 	margin : 0;
 	padding : 10pt 0pt;
 	text-align : center;
+}
+
+p#quote {
+	margin : 0;
+	padding : 10pt 0pt;
+	text-align : center;
+	font-family : 'Marck Script';
 }
 
 form.signin {
