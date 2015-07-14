@@ -39,7 +39,7 @@ def signin_post():
 def signout():
 	global name
 	name = ""
-	redirect('/home')
+	redirect('/signin')
 
 # log a new entry
 @route('/log', method='POST')
