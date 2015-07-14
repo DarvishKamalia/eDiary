@@ -1,7 +1,6 @@
 import json
 
 file_db = 'storage/entries.json'
-file_out = 'storage/output.json'
 
 ENCRYPT_KEY = 10
 
@@ -17,7 +16,7 @@ def load():
 
 # store everything to file_db
 def store(entries):
-	w = open(file_out, 'wb')
+	w = open(file_db, 'wb')
 	for entry in entries:
 		for index, string in enumerate(entry["text"]):
 		 entry["text"][index] = cipher(string, 0)

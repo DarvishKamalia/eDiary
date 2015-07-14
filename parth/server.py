@@ -14,31 +14,32 @@ def static(filepath):
 def home():
 	global name
 	if name == "":
-		return redirect('/signin')
-	data = {'entries' : load()[0:10], 'name' : name}
-	return template('home', data) 
+		redirect('/signin')
+	else:
+		data = {'entries' : load()[0:10], 'name' : name}
+		return template('home', data) 
 
+# signin
 @route('/signin')
 def signin():
 	return template('signin')
 
-# Sign Out Page
+# signin POST
+@route('/signin', method='POST')
+def signin_post():
+	global name
+	if request.forms['name'] != "":
+		name = request.forms['name']
+		redirect('/home')
+	else:
+		redirect('/signin')
+
+# signout
 @route('/signout')
 def signout():
 	global name
 	name = ""
-	return redirect('/home')
-
-
-
-#Sign In Page
-@route('/signin', method='POST')
-def signin_post():
-	global name
-	if request.forms.name != "":
-		name = request.forms.name
-		return redirect('/home')
-	return redirect('/signin')
+	redirect('/home')
 
 # log a new entry
 @route('/log', method='POST')
