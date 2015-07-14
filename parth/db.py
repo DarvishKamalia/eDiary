@@ -1,9 +1,11 @@
-import json
+import json #JSON encoder and decoder
+import urllib2 #HTTP interface library
 
 file_db = 'storage/entries.json'
 file_out = 'storage/output.json'
 
 ENCRYPT_KEY = 10
+QUOTE_API_URL = "http://api.theysaidso.com/qod.json"
 
 # load everything from file_db
 def load():
@@ -60,8 +62,10 @@ def cipher (string, mode):
 
 ##Returns a random quote from the quotes database
 #@retval quote
-def getQuote() {
-
-	return "quote quote quote" 
-
-}
+def getQuote():
+	#Fetch JSON from API
+	quoteJSON = urllib2.urlopen(QUOTE_API_URL)
+	quoteData = json.loads(quoteJSON.read())
+	print
+	return {"text" : quoteData["contents"]["quotes"][0]["quote"] ,
+				"author" : quoteData["contents"]["quotes"][0]["author"]}
