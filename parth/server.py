@@ -1,5 +1,5 @@
 from bottle import route, run, template, request, redirect, static_file
-from db import load, store
+from db import load, store, getQuote
 from entry import make
 
 name = ""
@@ -22,7 +22,8 @@ def home():
 # signin
 @route('/signin')
 def signin():
-	return template('signin')
+	quote = {'quote' : getQuote() }
+	return template('signin', quote)
 
 # signin POST
 @route('/signin', method='POST')

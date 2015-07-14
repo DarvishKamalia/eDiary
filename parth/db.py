@@ -59,8 +59,8 @@ def cipher (string, mode):
 
 ##Returns a random quote from the quotes database
 #@retval quote
-def getQuote() {
+def getQuote():
 
 	return "quote quote quote" 
 
-}
+
