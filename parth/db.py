@@ -57,3 +57,11 @@ def cipher (string, mode):
 
 	print "encrypted ", result
 	return result
+
+##Returns a random quote from the quotes database
+#@retval quote
+def getQuote() {
+
+	return "quote quote quote" 
+
+}
