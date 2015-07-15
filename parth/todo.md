@@ -1,2 +1,2 @@
 - quotes on exit
-- feeling --dash-- --smiley--
+- add feelings to search, aka make it complete

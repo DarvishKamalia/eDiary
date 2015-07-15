@@ -7,17 +7,22 @@
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Cabin:400,700,400italic,700italic|Vollkorn:400italic,700italic,400,700|Boogaloo|Marck+Script' rel='stylesheet' type='text/css'>
 		<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 		<link rel='stylesheet' href='/static/given.css'>
-		<link rel='stylesheet' href='/static/home.css'>
+		<link rel='stylesheet' href='/static/search.css'>
 	</head>
 	<body>
+		<div id='left'></div>
 		<div id='middle'>
-			<h3 id='recent'>Search Results</h3>
+			<h2 id='result'>Search Results</h2>
+			<h3 id='query'>Query : {{query['day']}} {{query['mon']}} {{query['year']}}</h3>
 			<div id='entries'>
 			% i = 0
 			% while i < len(entries):
 				% entry = entries[i]
 				<div class='entry'>
 					<p class='date'>
+				% if entry['feel'] != '':
+						<span title='{{entry['feel']}}'>&#x{{feelings[entry['feel']]}};</span> &nbsp;|&nbsp;
+				% end
 						{{'%d:%02d %s' % (entry['hour'], entry['min'], entry['ampm'])}} &nbsp;|&nbsp;
 						{{'%s %s \'%s' % (entry['day'], entry['mon'], entry['year'][2:])}} &nbsp;|&nbsp;
 						<a href='/erase/{{entry['id']}}' title='Erase'><i class='fa fa-eraser'></i></a>
@@ -37,5 +42,6 @@
 			% end
 			</div>
 		</div>
+		<div id='right'></div>
 	</body>
 </html>

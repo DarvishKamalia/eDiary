@@ -1,6 +1,5 @@
 from bottle import route, run, template, request, redirect, static_file
-from db import load, store, getQuote
-from entry import make
+import db
 
 name = ""
 
@@ -16,24 +15,24 @@ def home():
 	if name == "":
 		redirect('/signin')
 	else:
-		data = {'entries' : load()[0:10], 'name' : name}
-		return template('home', data) 
+		data = {'entries' : db.loadEntries()[0:10], 'feelings' : db.loadFeelings(), 'name' : name}
+		return template('home', data)
 
 # signin
 @route('/signin')
 def signin():
-	quote = {'quote' : getQuote() }
-	return template('signin', quote)
+	data = {'quote' : db.getQuote()}
+	return template('signin', data)
 
 # signin POST
 @route('/signin', method='POST')
 def signin_post():
 	global name
-	if request.forms['name'] != "":
+	if request.forms['name'] == "":
+		redirect('/signin')
+	else:
 		name = request.forms['name']
 		redirect('/home')
-	else:
-		redirect('/signin')
 
 # signout
 @route('/signout')
@@ -45,33 +44,34 @@ def signout():
 # log a new entry
 @route('/log', method='POST')
 def log():
-	text = request.forms['entry']
+	text = request.forms['text']
+	feel = request.forms['feel']
 	if text == '':
 		redirect('/home')
 	else:
-		entry = make(text)
-		entries = load()
+		entry = db.newEntry(text, feel)
+		entries = db.loadEntries()
 		entries.insert(0, entry)
-		store(entries)
+		db.storeEntries(entries)
 		redirect('/home')
 
 # erase an old entry
 @route('/erase/<id>')
 def erase(id):
-	entries = load()
+	entries = db.loadEntries()
 	i = 0
 	while i < len(entries):
 		if id == entries[i]['id']:
 			del entries[i]
 			break
 		i += 1
-	store(entries)
+	db.storeEntries(entries)
 	redirect('/home')
 
 # search based on day, month, year
 @route('/search')
 def search():
-	entries = load()
+	entries = db.loadEntries()
 
 	# year
 	temp1 = []
@@ -103,7 +103,7 @@ def search():
 	else:
 		result = temp2
 	
-	data = {'entries' : result}
+	data = {'entries' : result, 'query' : request.query, 'feelings' : db.loadFeelings()}
 	return template('search', data)
 
-run(reloader=True,port=8000, debug=True)
+run(reloader=True, debug=True)

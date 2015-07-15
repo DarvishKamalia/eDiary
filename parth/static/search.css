@@ -19,32 +19,27 @@ div#right {
 
 /* --- */
 
-h2#welcome {
+h2#result, h3#query {
 	margin : 0;
 	padding : 10pt 0pt;
 	text-align : center;
 }
 
-p#quote {
+div.entry {
+	padding : 10pt 0pt;
+}
+
+p.date {
 	margin : 0;
-	padding : 10pt 0pt;
-	text-align : center;
+	color : gray;
+	font-size : small;
 }
 
-p#author {
+p.text {
 	margin : 0;
-	padding : 10pt 0pt;
-	text-align : center;
 }
 
-form.signin {
-	display : flex;
-	flex-direction : column;
-	align-items : center;
-	padding : 10pt 0pt;
-}
-
-input.signin {
-	text-align : center;
-	background-color : buttonface;
+hr {
+	margin : 0;
+	border-top : thin solid black;
 }

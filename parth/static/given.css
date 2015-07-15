@@ -8,11 +8,6 @@ body {
 	font-family : 'Cabin';
 }
 
-h1, h2, h3 {
-	font-family : 'Boogaloo';
-	font-weight : normal;
-}
-
 a {
 	text-decoration : none;
 }
