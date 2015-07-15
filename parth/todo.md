@@ -1,2 +1,0 @@
-- quotes on exit
-- add feelings to search, aka make it complete
