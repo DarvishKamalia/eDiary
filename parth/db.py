@@ -1,11 +1,15 @@
 import json, urllib2, datetime
+import json #JSON encoder and decoder
+import urllib2 #HTTP interface library
+import time #for current date
+import random #for random number
 
+file_db = 'storage/entries.json'
 ENTRIES = 'storage/entries.json'
 FEELINGS = 'storage/feelings.json'
-QUOTE = 'storage/quote.json'
 ENCRYPT_KEY = 10
-QUOTE_API_URL = "http://api.theysaidso.com/qod.json"
 MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+QUOTE_API_URL = "https://raw.githubusercontent.com/DarvishKamalia/mygithubpage/master/quotes.json"
 
 # create a new entry (just create it in memory, do not yet save it to disk)
 def newEntry(text, feel):
@@ -84,23 +88,15 @@ def cipher (string, mode):
 ##Returns a random quote from the quotes database
 #@retval quote
 def getQuote():
-	r = open(QUOTE, 'r')
-	quote = json.load(r)
-	r.close();
 
-	if quote['day'] == datetime.datetime.now().day:
-		return quote
-	else:
-		#Fetch JSON from API
-		quoteJSON = urllib2.urlopen(QUOTE_API_URL)
-		quoteData = json.loads(quoteJSON.read())
-		quote =  { "quote" : quoteData["contents"]["quotes"][0]["quote"],
-					  "author" : quoteData["contents"]["quotes"][0]["author"],
-					  "day" : datetime.datetime.now().day }
-		w = open(QUOTE, 'wb')
-		json.dump(quote, w)
-		w.close()
-		return quote
+	#Fetch JSON from API
+	quoteJSON = urllib2.urlopen(QUOTE_API_URL)
+	quoteData = json.load(quoteJSON)
+	json.dumps (quoteData, indent=4)
+	random.seed()
+	index = random.randint(0, len(quoteData) - 1)
+	return quoteData[index]
+
 
 ##Load everything contained in FEELINGS
 #@retval dict of feelings and their emojis
