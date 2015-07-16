@@ -1,0 +1,45 @@
+body {
+	display : flex;
+	margin : 0;
+}
+
+div#left {
+	flex : 1 0;
+}
+
+div#middle {
+	flex : 3 0;
+	padding : 0pt 10pt;
+	background-color : #b0ffff;
+}
+
+div#right {
+	flex : 1 0;
+}
+
+/* --- */
+
+h2#result, h3#query {
+	margin : 0;
+	padding : 10pt 0pt;
+	text-align : center;
+}
+
+div.entry {
+	padding : 10pt 0pt;
+}
+
+p.date {
+	margin : 0;
+	color : gray;
+	font-size : small;
+}
+
+p.text {
+	margin : 0;
+}
+
+hr {
+	margin : 0;
+	border-top : thin solid black;
+}
