@@ -1,6 +1,13 @@
 body {
 	display : flex;
 	margin : 0;
+	background: url("../static/diary1.jpg") center;
+	width: 100%;
+	height: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
 }
 
 div#left {
@@ -9,8 +16,7 @@ div#left {
 
 div#middle {
 	flex : 3 0;
-	padding : 0pt 10pt;
-	background-color : #b0ffff;
+	
 }
 
 div#right {
@@ -23,6 +29,7 @@ h2#welcome {
 	margin : 0;
 	padding : 10pt 0pt;
 	text-align : center;
+	color: white;
 }
 
 p#quote {

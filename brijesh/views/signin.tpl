@@ -12,13 +12,14 @@
 	<body>
 		<div id='left'></div>
 		<div id='middle'>
-			<h2 id='welcome'>Welcome!</h2>
+<!--			<h2 id='welcome'>Welcome!</h2>
 			<p id='quote'>" {{quote['quote']}} "</p>
 			<p id='author'>{{quote['author']}}</p>
 			<form class='signin' action='/signin' method='POST'>
 				<input class='signin' type='text' name='name' placeholder='First/Nick Name'>
 				<button class='signin' type='submit'><i class='fa fa-sign-in'></i>&nbsp; Sign In</button>
-			</form>
+			</form> -->
+			<h2 id='welcome'> Welcome to Diary! </h2>	
 		</div>
 		<div id='right'></div>
 	</body>
