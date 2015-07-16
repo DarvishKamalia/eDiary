@@ -7,7 +7,6 @@ name = ""
 @route('/static/<filepath:path>')
 def static(filepath):
 	return static_file(filepath, './static')
-
 # homepage
 @route('/home')
 def home():

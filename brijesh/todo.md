@@ -1,2 +1,0 @@
-- quotes on exit
-- feeling --dash-- --smiley--
