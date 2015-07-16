@@ -3,13 +3,14 @@ import json #JSON encoder and decoder
 import urllib2 #HTTP interface library
 import time #for current date
 import random #for random number
+import codecs
 
 file_db = 'storage/entries.json'
 ENTRIES = 'storage/entries.json'
 FEELINGS = 'storage/feelings.json'
 ENCRYPT_KEY = 10
 MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-QUOTE_API_URL = "https://raw.githubusercontent.com/DarvishKamalia/mygithubpage/master/quotes.json"
+QUOTE_API_URL = "https://raw.githubusercontent.com/DarvishKamalia/learning-diary-project-/master/parth/quote.json"
 
 # create a new entry (just create it in memory, do not yet save it to disk)
 def newEntry(text, feel):
