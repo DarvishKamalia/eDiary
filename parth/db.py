@@ -1,11 +1,12 @@
 import json #JSON encoder and decoder
 import urllib2 #HTTP interface library
 import time #for current date
+import random #for random number
 
 file_db = 'storage/entries.json'
 
 ENCRYPT_KEY = 10
-QUOTE_API_URL = "http://api.theysaidso.com/qod.json"
+QUOTE_API_URL = "https://raw.githubusercontent.com/DarvishKamalia/mygithubpage/master/quotes.json"
 QUOTE_FILE_NAME = "quote.json"
 
 # load everything from file_db
@@ -66,24 +67,9 @@ def cipher (string, mode):
 def getQuote():
 
 	#Fetch JSON from API
-	r = open (QUOTE_FILE_NAME, 'r')
-	today = time.strftime("%d/%m/%Y")
-	quoteData = json.load(r)
-	exists = True
-
-	try:
-		storedDate = quoteData["date"]
-
-	except KeyError:
-		exists = False
-
-	if (not exists or quoteData["date"] != today):
-			print "loading" 
-			quoteJSON = urllib2.urlopen(QUOTE_API_URL)
-			quoteData = json.loads(quoteJSON.read())
-			quoteData["date"] = today
-			w = open (QUOTE_FILE_NAME, 'wb')
-			json.dump(quoteData, w)
-
-	return {"text" : quoteData["contents"]["quotes"][0]["quote"] ,
-				"author" : quoteData["contents"]["quotes"][0]["author"]}
+	quoteJSON = urllib2.urlopen(QUOTE_API_URL)
+	quoteData = json.load(quoteJSON)
+	json.dumps (quoteData, indent=4)
+	random.seed()
+	index = random.randint(0, len(quoteData) - 1)
+	return quoteData[index]
