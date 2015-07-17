@@ -96,6 +96,7 @@ def getQuote():
 	json.dumps (quoteData, indent=4)
 	random.seed()
 	index = random.randint(0, len(quoteData) - 1)
+	print quoteData[index]
 	return quoteData[index]
 
 

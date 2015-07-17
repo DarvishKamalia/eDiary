@@ -20,7 +20,7 @@ def home():
 # signin
 @route('/signin')
 def signin():
-	data = {'quote' : db.getQuote()}
+	data = {'quote' : {"text" : "swag" , "author": "kk"}}
 	return template('signin', data)
 
 # signin POST
