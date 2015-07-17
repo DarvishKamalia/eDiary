@@ -20,7 +20,7 @@ def home():
 # signin
 @route('/signin')
 def signin():
-	data = {'quote' : {"text" : "swag" , "author": "kk"}}
+	data = {'quote' : db.getQuote()}
 	return template('signin', data)
 
 # signin POST
@@ -101,7 +101,7 @@ def search():
 				result.append(entry)
 	else:
 		result = temp2
-	
+
 	data = {'entries' : result, 'query' : request.query, 'feelings' : db.loadFeelings()}
 	return template('search', data)
 
