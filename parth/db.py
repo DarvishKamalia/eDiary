@@ -45,7 +45,7 @@ def loadEntries():
 	for entry in entries:
 		for index, string in enumerate(entry["text"]):
 			entry["text"][index] = cipher(string, 1)
-	print "finished load" 
+	print "finished load"
 	return entries
 
 # store everything to ENTRIES
@@ -54,7 +54,7 @@ def storeEntries(entries):
 		for index, string in enumerate(entry["text"]):
 			entry["text"][index] = cipher(string, 0)
 	w = open(ENTRIES, 'wb')
-	json.dump(entries, w)
+	json.dump(entries, w, indent=4)
 	w.close()
 
 # encrypt or decrypt a given text string using ENCRYPT_KEY defined in the header
