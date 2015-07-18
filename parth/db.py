@@ -39,11 +39,13 @@ def newEntry(text, feel):
 # load everything from ENTRIES
 def loadEntries():
 	r = open(ENTRIES, 'r')
+	print "called load"
 	entries = json.load(r)
 	r.close()
 	for entry in entries:
 		for index, string in enumerate(entry["text"]):
 			entry["text"][index] = cipher(string, 1)
+	print "finished load" 
 	return entries
 
 # store everything to ENTRIES
