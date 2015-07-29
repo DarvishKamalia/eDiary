@@ -1,0 +1,32 @@
+h1, h2 {
+	font-family : 'Bubblegum Sans';
+	font-weight : normal;
+}
+
+h3, h4 {
+	font-weight : bold;
+}
+
+h3, h4, p, ul, ol, form {
+	font-family : 'Cabin';
+}
+
+pre, code {
+	font-family : 'Ubuntu Mono';
+}
+
+.hand {
+	font-family : 'Marck Script';
+}
+
+a {
+	text-decoration : none;
+}
+
+a:link {
+	color : #4b0082;
+}
+
+a:visited {
+	color : #008080;
+}
