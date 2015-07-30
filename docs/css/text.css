@@ -24,9 +24,11 @@ a {
 }
 
 a:link {
-	color : #4b0082;
+	color : blue;
+	font-weight : bold;
 }
 
 a:visited {
 	color : #008080;
+	font-weight: bold;
 }
