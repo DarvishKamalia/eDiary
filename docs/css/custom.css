@@ -8,10 +8,13 @@ h1, h2 {
 
 #logo {
 	width: 200px;
-	margin: 0 auto;
-	
+	margin: 0 auto;	
 }
 
 #img-logo{
 	width: 200px;
+}
+
+.emoji {
+	height: 1.2em;
 }
