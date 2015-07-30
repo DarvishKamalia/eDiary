@@ -5,3 +5,13 @@ body {
 h1, h2 {
 	text-align : center
 }
+
+#logo {
+	width: 100px;
+	margin: 0 auto;
+	
+}
+
+#img-logo{
+	width: 100px;
+}
