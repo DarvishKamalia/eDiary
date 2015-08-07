@@ -1,11 +1,13 @@
-import sys, random, math
+from sys import argv
+from random import random
+from math import sqrt
 
-steps = int(sys.argv[1])
+steps = int(argv[1])
 x, y = 0, 0
 
 i = 0
 while i < steps:
-	rand = random.random()
+	rand = random()
 
 	if rand < 0.25: x = x + 1
 	elif rand < 0.5: x = x - 1
@@ -15,5 +17,5 @@ while i < steps:
 	print '(%d, %d)' % (x, y)
 	i = i + 1
 
-dist = math.sqrt(x*x + y*y)
+dist = sqrt(x*x + y*y)
 print 'distance from beginning = %f' % dist

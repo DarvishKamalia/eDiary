@@ -1,15 +1,16 @@
 
-
 All instructions for Project iCode will be available on this page.
 So keep checking it regularly. :)
 
 ---
 
-Instructions (and things to do) before each intervention:
+Briefing (and things you could possibly do) before each workshop:
 
 - [August 1, Saturday][1/8]
+- [August 8, Saturday][8/8]
 
 [1/8]: 1-8.html
+[8/8]: 8-8.html
 
 ---
 

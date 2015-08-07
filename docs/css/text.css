@@ -21,14 +21,6 @@ pre, code {
 
 a {
 	text-decoration : none;
-}
-
-a:link {
-	color : blue;
+	color : indigo;
 	font-weight : bold;
-}
-
-a:visited {
-	color : #008080;
-	font-weight: bold;
 }
