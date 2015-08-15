@@ -1,0 +1,232 @@
+h1 {
+text-align : center;
+color : #FFA500;
+font-family: Waltograph UI;
+font-size: 45
+}
+#firstPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#secondPara { text-align: right;
+color: 0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#thirdPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#fourthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#fifthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#sixthPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#seventhPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#eighthPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#ninthPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#tenthPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#eleventhPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#twelfthPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#thirteenthPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#fourteenthPara { text-align: right;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#fifteenthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#sixteenthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#seventeenthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#eighteenthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#nineteenthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#twentiethPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#twentyfirstPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#twentysecondPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#twentythirdPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#twentyfourthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#twentyfifthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#twentysixthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#twentyseventhPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#twentyeighthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+#twentyninthPara { text-align: left;
+color:0d0c0c;
+font-family: Comic Sans MS;
+}
+
+#thirty { text-align: left;
+color: 0d0c0c;
+font-family: Comic Sans MS;
+font-size: 25;
+}
+
+p#a1 {text-align: left;
+color: 0d0c0c;
+font-family: Comic Sans MS;
+}
+
+p#a2 {text-align: left;
+color: 0d0c0c;
+font-family: Comic Sans MS;
+}
+
+
+
+body {
+background-image: url("bg5.jpg");
+}
+
+h2#one { text-align: left;
+color: 1d16e7;
+font-family:cheri;
+}
+
+h2#two {
+ text-align: right;
+color: 1d16e7;
+font-family:cheri;
+}
+
+h2#three {text-align: left;
+color: 1d16e7;
+font-family:cheri;
+}
+
+h2#four { text-align: right;
+color: 1d16e7;
+font-family:cheri;
+}
+
+h2#five { text-align: left;
+color: 1d16e7;
+font-family:cheri;
+}
+
+h2#six {text-align:left;
+color: 1d16e7;
+font-family:cheri;
+}
+
+h3#m1 { text-align: left;
+color: #FFA500;
+font-family: cheri;
+}
+
+h3#m2 { text-align: left;
+color: #FFA500;
+font-family: cheri;
+}
+ 
+html {border-width:25px;
+border-color:908b82;
+border-style:ridge;
+cursor:pointer;
+}
+
+button type {
+button-color: 0d0c0c'
+button-text-font: cheri;
+}
