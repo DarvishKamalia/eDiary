@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from markdown import markdown
 import os
 

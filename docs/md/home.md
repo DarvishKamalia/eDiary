@@ -1,3 +1,5 @@
+Project iCode
+=============
 
 All instructions for Project iCode will be available on this page.
 So keep checking it regularly. :)
@@ -6,13 +8,11 @@ So keep checking it regularly. :)
 
 Briefing (and things you could possibly do) before each workshop:
 
-- [August 1, Saturday][1/8]
-- [August 8, Saturday][8/8]
-- [August 15, Saturday][15/8]
-
-[1/8]: 1-8.html
-[8/8]: 8-8.html
-[15/8]: 15-8.html
+- [Setup](setup.html)
+- [August 1, Saturday](1-8.html)
+- [August 8, Saturday](8-8.html)
+- [August 15, Saturday](15-8.html)
+- [Frequent Errors](fe.html)
 
 ---
 

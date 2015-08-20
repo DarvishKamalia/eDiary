@@ -1,14 +1,12 @@
+body {
+	font-family : 'Cabin';
+	line-height : 1.25em;
+}
+
 h1, h2 {
 	font-family : 'Bubblegum Sans';
 	font-weight : normal;
-}
-
-h3, h4 {
-	font-weight : bold;
-}
-
-h3, h4, p, ul, ol, form {
-	font-family : 'Cabin';
+	text-align : center;
 }
 
 pre, code {
@@ -21,6 +19,12 @@ pre, code {
 
 a {
 	text-decoration : none;
-	color : indigo;
-	font-weight : bold;
+}
+
+a:link {
+	color : #191970;
+}
+
+a:visited {
+	color : #483d8b;
 }
