@@ -12,6 +12,7 @@ Briefing (and things you could possibly do) before each workshop:
 - [August 1, Saturday](1-8.html)
 - [August 8, Saturday](8-8.html)
 - [August 15, Saturday](15-8.html)
+- [August 22, Saturday](22-8.html)
 - [Frequent Errors](fe.html)
 
 ---
