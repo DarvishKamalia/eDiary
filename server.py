@@ -1,3 +1,6 @@
+import sys
+sys.dont_write_bytecode = True
+
 from bottle import route, run, template, request, redirect, static_file
 import db
 
