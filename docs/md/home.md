@@ -1,7 +1,7 @@
 Project iCode
 =============
 
-*Important Note* : If you have a **Windows** computer and **do not** have a working
+*Important Note* : If you're still using **Windows** and **do not** have a working
 **Python** installation on it, please decide who you're going to **pair up** with **before**
 the workshops. 
 
