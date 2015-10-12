@@ -1,6 +1,10 @@
 Project iCode
 =============
 
+*Important Note* : If you have a **Windows** computer and **do not** have a working
+**Python** installation on it, please decide who you're going to **pair up** with **before**
+the workshops. 
+
 All instructions for Project iCode will be available on this page.
 So keep checking it regularly. :)
 
