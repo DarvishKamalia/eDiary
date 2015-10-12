@@ -2,8 +2,9 @@ package main
 
 import (
 	"os/exec"
+	"io/ioutil"
 	"strings"
-	"os"
+	"github.com/russross/blackfriday"
 )
 
 func main () {
@@ -16,24 +17,17 @@ func main () {
 	for _, md := range mds {
 
 		// title
-		title, _ := os.Create("title.temp")
 		temp := md[:len(md) - 3]
-		title.Write([]byte(temp))
-		title.Close()
+		ioutil.WriteFile("title.temp", []byte(temp), 0666)
 
 		// body
-		body, _ := os.Create("body.temp")
-		mdown := exec.Command("perl", "/home/parthtoo/tools/Markdown.pl", "md/" + md)
-		mdown.Stdout = body
-		mdown.Run()
-		body.Close()
+		in, _ := ioutil.ReadFile("md/" + md)
+		out = blackfriday.MarkdownBasic(in)
+		ioutil.WriteFile("body.temp", out, 0666)
 
 		// cat everything
-		full, _ := os.Create(temp + ".html")
-		cat := exec.Command("cat", "html/head.html", "title.temp", "html/midd.html", "body.temp", "html/foot.html")
-		cat.Stdout = full
-		cat.Run()
-		full.Close()
+		out, _ = exec.Command("cat", "html/head.html", "title.temp", "html/midd.html", "body.temp", "html/foot.html").Output()
+		ioutil.WriteFile(temp + ".html", out, 0666)
 	}
 
 	// cleanup
