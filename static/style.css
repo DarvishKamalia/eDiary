@@ -1,0 +1,148 @@
+/* layout */
+
+body {
+	display : flex;
+	margin : 0;
+}
+
+div#left {
+	flex : 1 0;
+}
+
+div#middle {
+	flex : 3 0;
+	padding : 0pt 10pt;
+	background-color : #b0ffff;
+}
+
+div#right {
+	flex : 1 0;
+}
+
+/* signin form */
+
+h2#welcome {
+	margin : 0;
+	padding : 10pt 0pt;
+	text-align : center;
+}
+
+form.signin {
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+	padding : 10pt 0pt;
+}
+
+input.signin {
+	text-align : center;
+	background-color : buttonface;
+}
+
+/* signout form */
+
+form.name {
+	display : flex;
+	flex-direction : column;
+	align-items : center;
+	padding : 10pt 0pt;
+}
+
+p.name {
+	margin : 0;
+	padding : 0.5em;
+	background-color : buttonface;
+}
+
+/* new entry form */
+
+form.log {
+	display : flex;
+	align-items : center;
+	padding : 10pt 0pt;
+}
+
+div.log {
+	flex : 1 0;
+	display : flex;
+	flex-direction : column;
+}
+
+select.log {
+	border-top : thin solid black;
+	background-color : white;
+}
+
+button.log {
+	margin-left : 10pt;
+	background-color : #00bbbb;
+}
+
+/* entries */
+
+h1#diary, h3#all {
+	margin : 0;
+	padding : 10pt 0pt;
+	text-align : center;
+}
+
+div.entry {
+	padding : 10pt 0pt;
+}
+
+p.date {
+	margin : 0;
+	color : gray;
+	font-size : small;
+}
+
+p.text {
+	margin : 0;
+}
+
+hr {
+	margin : 0;
+	border-top : thin solid black;
+}
+
+/* this is not important, it is just a bunch of styles I imported from my other projects */
+
+* {
+	flex : 0 0 auto;
+}
+
+body, pre {
+	font-family : 'Cabin';
+}
+
+pre {
+	margin : 0;
+}
+
+a {
+	text-decoration : none;
+}
+
+a:link {
+	color : #005555;
+}
+
+a:visited {
+	color : #007777;
+}
+
+input, button, select, textarea {
+	font-family : inherit;
+	font-size : inherit;
+	resize : none;
+	border : none;
+	padding : 0.5em;
+}
+
+input:focus, button:focus, select:focus, textarea:focus {
+	outline : none;
+}
+
+button {
+	cursor : pointer;
+}
