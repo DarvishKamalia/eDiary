@@ -19,6 +19,10 @@ Briefing (and things you could possibly do) before each workshop:
 - [August 22, Saturday](22-8.html)
 - [Frequent Errors](fe.html)
 
+Last three workshops:
+
+- [October 14, Wednesday](14-10.html)
+
 ---
 
 In case you run into any issues and need our help, or if you just have a

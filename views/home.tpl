@@ -12,41 +12,6 @@
 		<div id='left'>
 		</div>
 		<div id='middle'>
-			<h1 id='diary'>Your Diary</h1>
-			<form class='log' action='/log' method='POST'>
-				<div class='log'>
-					<textarea class='log' name='text' rows='7' placeholder="What's on your mind..."></textarea>
-					<select class='log' name='feel'>
-						<option value='' selected>How are you feeling...</option>
-					% for feel, emoji in feelings.iteritems():
-						<option value='{{feel}}'>&#x{{emoji}};&nbsp; {{feel}}</option>
-					% end
-					</select>
-				</div>
-				<button class='log' type='submit'><i class='fa fa-pencil'></i>&nbsp; Log</button>
-			</form>
-			<h3 id='all'>All Entries</h3>
-			<div id='entries'>
-			% i = 0
-			% while i < len(entries):
-				% entry = entries[i]
-				<div class='entry'>
-					<p class='date'>
-				% if entry['feel'] != '':
-						<span title='{{entry['feel']}}'>&#x{{feelings[entry['feel']]}};</span> &nbsp;|&nbsp;
-				% end
-						{{'%d:%02d %s' % (entry['hour'], entry['min'], entry['ampm'])}} &nbsp;|&nbsp;
-						{{'%s %s \'%s' % (entry['day'], entry['mon'], entry['year'][2:])}} &nbsp;|&nbsp;
-						<a href='/erase/{{entry['id']}}' title='erase'><i class='fa fa-eraser'></i></a>
-					</p>
-					<pre class='text'>{{entry['text']}}</pre>
-				</div>
-				% if i != len(entries) - 1:
-					<hr>
-				% end
-				% i += 1
-			% end
-			</div>
 		</div>
 		<div id='right'>
 			<form class='name' action='/signout'>

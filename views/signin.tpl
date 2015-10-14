@@ -11,11 +11,6 @@
 	<body>
 		<div id='left'></div>
 		<div id='middle'>
-			<h2 id='welcome'>Welcome!</h2>
-			<form class='signin' action='/signin' method='POST'>
-				<input class='signin' type='text' name='name' placeholder='First/Nick Name'>
-				<button class='signin' type='submit'><i class='fa fa-sign-in'></i>&nbsp; Sign In</button>
-			</form>
 		</div>
 		<div id='right'></div>
 	</body>
