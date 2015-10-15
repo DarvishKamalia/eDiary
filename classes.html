@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Diary</title>
+		<link rel='icon' href='/static/diary.png'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|Cabin:400,700,400italic,700italic|Vollkorn:400italic,700italic,400,700|Boogaloo|Marck+Script' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+		<link rel='stylesheet' href='/static/style.css'>
+	</head>
+	<body>
+		<div id='left'>
+		</div>
+		<div id='middle'>
+			<h1 id='diary'>Your Diary</h1>
+			<form class='log' action='/log' method='POST'>
+				<div class='log'>
+					<textarea class='log' name='text' rows='7' placeholder="What's on your mind..."></textarea>
+					<select class='log' name='feel'>
+						<option value='' selected>How are you feeling...</option>
+						<option value='naughty'>&#x1f61c;&nbsp; naughty</option>
+						<option value='tired'>&#x1f62b;&nbsp; tired</option>
+						<option value='relieved'>&#x1f60c;&nbsp; relieved</option>
+						<option value='angry'>&#x1f620;&nbsp; angry</option>
+						<option value='annoyed'>&#x1f612;&nbsp; annoyed</option>
+						<option value='sleepy'>&#x1f62a;&nbsp; sleepy</option>
+						<option value='confused'>&#x1f615;&nbsp; confused</option>
+						<option value='worried'>&#x1f61f;&nbsp; worried</option>
+						<option value='accomplished'>&#x1f64c;&nbsp; accomplished</option>
+						<option value='laughing'>&#x1f602;&nbsp; laughing</option>
+						<option value='crying'>&#x1f622;&nbsp; crying</option>
+						<option value='disappointed'>&#x1f61e;&nbsp; disappointed</option>
+						<option value='excited'>&#x1f601;&nbsp; excited</option>
+						<option value='happy'>&#x1f60a;&nbsp; happy</option>
+					</select>
+				</div>
+				<button class='log' type='submit'><i class='fa fa-pencil'></i>&nbsp; Log</button>
+			</form>
+			<h3 id='all'>All Entries</h3>
+			<div id='entries'>
+				<div class='entry'>
+					<p class='date'>
+						<span title='disappointed'>&#x1f61e;</span> &nbsp;|&nbsp;
+						4:23 pm &nbsp;|&nbsp;
+						14 Oct &#039;15 &nbsp;|&nbsp;
+						<a href='/erase/2015101416239478151' title='erase'><i class='fa fa-eraser'></i></a>
+					</p>
+					<pre class='text'>new entry!!</pre>
+				</div>
+					<hr>
+				<div class='entry'>
+					<p class='date'>
+						<span title='happy'>&#x1f60a;</span> &nbsp;|&nbsp;
+						1:00 pm &nbsp;|&nbsp;
+						13 Oct &#039;15 &nbsp;|&nbsp;
+						<a href='/erase/2015101313028641201' title='erase'><i class='fa fa-eraser'></i></a>
+					</p>
+					<pre class='text'>just stay calm
+and keep at it
+you&#039;ll do really good tomorrow!
+(in the workshop)</pre>
+				</div>
+			</div>
+		</div>
+		<div id='right'>
+			<form class='name' action='/signout'>
+				<p class='name'>Hi there, Parth!</p>
+				<button class='name' type='submit'><i class='fa fa-sign-out'></i>&nbsp; Sign Out</button>
+			</form>
+		</div>
+	</body>
+</html>
