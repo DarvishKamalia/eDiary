@@ -21,7 +21,9 @@ Briefing (and things you could possibly do) before each workshop:
 
 Last three workshops:
 
-- [October 14, Wednesday](14-10.html)
+- [October 14, 15, 17](14-15-17-10.html)
+
+Link to [final code](../final.zip), as was demoed at the end of the workshop today (17th October). 
 
 ---
 
